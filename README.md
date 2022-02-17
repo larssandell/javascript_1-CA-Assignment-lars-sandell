@@ -52,3 +52,7 @@ fetch("https://cpu-data.p.rapidapi.com/cpus/1", {
 .catch(err => {
 	console.error(err);
 });
+
+
+
+https://rapidapi.com/community/api/dota-2-steam-web/
