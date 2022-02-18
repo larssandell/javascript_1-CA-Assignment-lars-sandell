@@ -37,13 +37,20 @@ aside {
 }
 main {
     grid-area: main;
-    color: fff;
     background-color: #333;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
 }
 footer {
     grid-area: footer;
 }
 
+.list {
+    display: flex;
+    flex-direction: column;
+    list-style-type: disc;
+}
 .bg {
     background: var(--gradiant-main);
     background-attachment: fixed;
@@ -53,6 +60,7 @@ footer {
     height: 300px;
 }
 .loader {
+    display: flex;
     background-image: url(/images/sticker-512x512.png);
     background-size: contain;
     width: 150px;

@@ -4,3 +4,5 @@
 #4B8C3A
 #305925
 #B4F2A2
+status
+episodes
