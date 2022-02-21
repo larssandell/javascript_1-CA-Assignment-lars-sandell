@@ -58,6 +58,18 @@ a {
 a:hover {
     color: rgba(180, 242, 162, 1);
 }
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* class */
+.contact-link {
+    color: black;
+    border: 2px solid black;
+}
+
 .list {
     display: flex;
     flex-direction: column;
@@ -95,6 +107,13 @@ a:hover {
     width: 800px;
     height: auto;
 }
+.form-err {
+    color: red;
+    text-align: center;
+    display: none;
+}
+
+/* keyframes */
 
 @keyframes rotate {
     0% {
