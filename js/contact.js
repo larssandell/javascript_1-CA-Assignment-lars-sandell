@@ -40,7 +40,7 @@ function checkForm(value, leng) {
 }
 
 function emailValidation(email){
-    const regEx = /\S+@\S+\.\S+/;
+    const regEx = /^([a-zA-Z0-9-_\.]+)@([a-z-?]+)\.([a-z]{2,6})(\.[a-z]{2,4})?/g;
     const emailMatche = regEx.test(email);
     return emailMatche;
 }
