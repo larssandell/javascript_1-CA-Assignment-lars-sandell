@@ -40,6 +40,7 @@ function checkForm(value, leng) {
 }
 
 function emailValidation(email){
+    // denne burde være nokså sikker, har også lagt til valgfri andre dommene tilfelle co.uk etc
     const regEx = /^([a-zA-Z0-9-_\.]+)@([a-z-?]+)\.([a-z]{2,6})(\.[a-z]{2,4})?/g;
     const emailMatche = regEx.test(email);
     return emailMatche;
