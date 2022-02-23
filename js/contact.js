@@ -44,9 +44,3 @@ function emailValidation(email){
     const emailMatche = regEx.test(email);
     return emailMatche;
 }
-
-
-
-//email - minimum length of 25
-// subject - minimum length of 10
-// name - required
