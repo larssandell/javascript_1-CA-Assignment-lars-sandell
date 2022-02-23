@@ -6,15 +6,16 @@ const subject = document.querySelector("#subject");
 const subjectErr = document.querySelector("#err-sub");
 const email = document.querySelector("#email");
 const emailErr = document.querySelector("#err-email");
-const btn = document.querySelector("button");
+const btnSubmit = document.querySelector(".submit-btn");
 
-
-function valiForm(event) {
-    if(checkForm(fullName.value, 0) && checkForm(subject.value, 9) && emailValidation(email.value)) {
-        btn.disabled = false;
+// required i html fungerer ikke sammen med javascript, den vil
+// aktivere submit selv om du ikke har skrevet noe der, men får feil når du trykker
+function valiForm() {
+    if(checkForm(fullName.value, 1) && checkForm(subject.value, 9) && emailValidation(email.value)) {
+        btnSubmit.disabled = false;
     } else {
         formsucess.innerHTML = "";
-        btn.disabled = true;
+        btnSubmit.disabled = true;
     }
 }
 fullName.addEventListener("keyup", valiForm);
