@@ -27,9 +27,8 @@ function createHtml(apiChar) {
     console.log(apiChar);
     charContainer.innerHTML = `<div class="char"><h1>${apiChar.name}</h1>
                       <img src="${apiChar.image}"></img></div>
-                      <div class="char"><h2>Gender: ${apiChar.gender}</h2>
-                      <h2>Species: ${apiChar.species}</h2>
-                      <h2>Location: ${apiChar.location.name}</h2>
-                      <h2>Status: ${apiChar.status}</h2></div>
-                      <div><ul>Episodes: <a>${apiChar.episode}</a></ul></div>`
+                      <div class="char"><h3>Gender:<h3><h3 class="h3-blue">${apiChar.gender}</h3>
+                      <h3>Species:</h3><h3 class="h3-blue">${apiChar.species}</h3>
+                      <h3>Location:</h3><h3 class="h3-blue">${apiChar.location.name}</h3>
+                      <h3>Status:</h3><h3 class="h3-blue">${apiChar.status}</h3><h3>Number of episodes:</h3><h3 class="h3-blue">${apiChar.episode.length}</h3></div>`
 }

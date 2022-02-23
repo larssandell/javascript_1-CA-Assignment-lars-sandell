@@ -10,18 +10,24 @@
     </head>
     <body>
         <header class="bg"><div><a href="index.html"><img src="/images/rick_and_morty_logo.png"></img></a></div></header>
-        <aside class="bg"><a class="contact-link" href="/contact.html">Contact</a></aside>
+        <aside class="bg">
+            <button onclick="window.location.href='/contact.html';" class="contact-link">Contact</button>
+            <!-- <a class="contact-link" href="/contact.html">Contact</a> -->
+        </aside>
         <main>
+            <button onclick="window.location.href='/index.html';" class="goback">Go Back!</button>
             <form id="contact-form">
-                <div class="form-uncomplete"></div>
+                <div class="form-sucess"></div>
                 <div>
-                    <label>Full name: (Required)</label>
+                    <label>Full name:</label>
                     <input name="name" id="name" placeholder="Full name">
+                    <label>(Required)</label>
                     <span class="form-err" id="err-name">full name required</span>
                 </div>
                 <div>
-                    <label>Subject: (Minimum length of 10)</label>
+                    <label>Subject:</label>
                     <input name="subject" id="subject" placeholder="Subject">
+                    <label>(Minimum length of 10)</label>
                     <span class="form-err" id="err-sub">Enter minimum length of 10</span>
                 </div>
                 <div>
@@ -29,7 +35,7 @@
                     <input name="email" id="email" placeholder="E-mail adress">
                     <span class="form-err" id="err-email">Enter a valid E-mail adress</span>
                 </div>
-                <button>Submit</button>
+                <button disabled class="submit-btn">Submit</button>
             </form>
         </main>
         <footer class="bg"></footer>

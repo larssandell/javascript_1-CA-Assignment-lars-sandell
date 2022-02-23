@@ -1,35 +1,34 @@
 const form = document.querySelector("#contact-form");
-const formUncomplete = document.querySelector(".form-uncomplete")
+const formsucess = document.querySelector(".form-sucess")
 const fullName = document.querySelector("#name");
 const nameErr = document.querySelector("#err-name");
 const subject = document.querySelector("#subject");
 const subjectErr = document.querySelector("#err-sub");
 const email = document.querySelector("#email");
 const emailErr = document.querySelector("#err-email");
+const btn = document.querySelector("button");
 
 
 function valiForm(event) {
+    if(checkForm(fullName.value, 0) && checkForm(subject.value, 9) && emailValidation(email.value)) {
+        btn.disabled = false;
+    } else {
+        formsucess.innerHTML = "";
+        btn.disabled = true;
+    }
+}
+fullName.addEventListener("keyup", valiForm);
+subject.addEventListener("keyup", valiForm);
+email.addEventListener("keyup", valiForm);
+
+function submitForm(event) {
     event.preventDefault();
-    if (checkForm(fullName.value, 1)) {
-        nameErr.style.display = "none";
-    } else {
-        nameErr.style.display = "block";
-    }
-    if (checkForm(subject.value, 10)) {
-        subjectErr.style.display = "none";
-    } else {
-        subjectErr.style.display = "block";
-    }
-    if (emailValidation(email.value)) {
-        emailErr.style.display = "none";
-    } else {
-        emailErr.style.display = "block";
-    }
-    // level 2 når sendt ok 
-    //return formUncomplete.innerHTML = `<h2>The form was sucessfuly sent</h2>`
+    formsucess.innerHTML = `<h3 class="ok">The form has been sent</h3>`;
+    form.reset();
+
 }
 
-form.addEventListener("submit", valiForm);
+form.addEventListener("submit", submitForm);
 
 function checkForm(value, leng) {
     if (value.trim().length >= leng) {
