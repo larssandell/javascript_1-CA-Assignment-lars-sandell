@@ -25,6 +25,7 @@ getCharacters();
 
 function createHtml(apiChar) {
     console.log(apiChar);
+    document.title = `${apiChar.name}`
     charContainer.innerHTML = `<div class="char"><h1>${apiChar.name}</h1>
                       <img src="${apiChar.image}"></img></div>
                       <div class="char"><h3>Gender:<h3><h3 class="h3-blue">${apiChar.gender}</h3>
