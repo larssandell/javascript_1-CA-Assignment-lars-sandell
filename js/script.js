@@ -20,11 +20,11 @@ async function callApi() {
         });
     }catch(err) {
         console.log("Her er feilen " ,err);
-        loader.innerHTML = "none";
         document.querySelector("main").innerHTML = `<div class="error">
                                                         <img src="/images/error404.png"></a>
                                                         <h2>${err}</h2>
                                                     <div>`;
+        loader.innerHTML = "none";
     }
 }
 callApi();

@@ -16,6 +16,11 @@ html {
         rgba(17, 174, 191, 1) 90%,
         rgba(0, 0, 0, 1) 100%
     );
+    --gradient-noblack: linear-gradient(
+        90deg,
+        rgba(180, 242, 162, 1) 20%,
+        rgba(17, 174, 191, 1) 90%
+    );
 }
 /* Grid */
 body {
@@ -39,9 +44,6 @@ aside {
 main {
     grid-area: main;
     background-color: #333;
-    /* display: flex;
-    justify-content: center;
-    flex-direction: row; */
     border: 1px solid rgba(0, 0, 0, 1);
 }
 footer {
@@ -85,6 +87,9 @@ button {
     cursor: pointer;
     border-radius: 5px;
 }
+aside button {
+    margin: 5px 5px;
+}
 /* ID */
 #contact-form {
     display: flex;
@@ -94,7 +99,9 @@ button {
     border-radius: 10px;
     height: 430px;
     width: 350px;
-    margin: auto;
+    margin: 50px auto;
+    background: var(--gradient-noblack);
+    color: black;
 }
 #contact-form > div {
     margin: auto;
@@ -155,6 +162,8 @@ button {
 }
 .error {
     color: red;
+    margin: 20px auto;
+    text-align: center;
 }
 .error img {
     width: 800px;
@@ -189,6 +198,7 @@ button {
 .submit-btn:hover:enabled {
     background: var(--gradiant-main);
     font-size: 15px;
+    border: 3px solid black;
 }
 
 /* keyframes */
