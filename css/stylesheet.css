@@ -53,7 +53,7 @@ footer {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
-    margin: 0 10%;
+    margin: 0 25% 0 25%;
 }
 /* ----------------- */
 
@@ -139,14 +139,27 @@ aside button {
     height: 300px;
 }
 .char-container {
-    width: fit-content;
+    width: 600px;
     height: auto;
-}
-.char {
     border: 5px solid rgba(17, 174, 191, 1);
     border-radius: 2%;
+}
+.char-container > div {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+}
+.char {
     padding-bottom: 5px;
-    display: block;
+}
+.char-info {
+    padding-left: 10px;
+}
+.char h1 {
+    text-align: center;
+}
+.h3-blue {
+    color: rgba(17, 174, 191, 1);
 }
 .loader {
     display: flex;
@@ -177,9 +190,7 @@ aside button {
 .ok {
     color: green;
 }
-.h3-blue {
-    color: rgba(17, 174, 191, 1);
-}
+
 .goback {
     width: 100px;
     position: absolute;
